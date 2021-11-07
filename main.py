@@ -22,11 +22,9 @@ values = data.to_numpy()
 attributes = copy.deepcopy(values)
 features = 4
 mean = list()
-std = list()
 
 for i in range(features):
     mean.insert(i, np.mean(values[:, i]))
-    std.insert(i, np.std(values[:, i]))
     attributes[:, i] = values[:, i] - mean[i]
 
 labels = attributes[:, 4]
