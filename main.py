@@ -42,7 +42,7 @@ projection_data1 = numpy.dot(x, projection_matrix1)
 projection_data2 = numpy.dot(x, projection_matrix2)
 
 # Plotting PCA for K=2
-fig1 = px.scatter(projection_data1, x=0, y=1, color=values[:, 4])
+fig1 = px.scatter(projection_data1, x=0, y=1, color=values[:, 4], labels={'0': 'PC 1', '1': 'PC 2'})
 fig1.show()
 
 # Plotting PCA for K=3
